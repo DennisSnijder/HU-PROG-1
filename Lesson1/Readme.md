@@ -66,7 +66,42 @@ prePosition = ''
 lastName = 'Snijder'
 ```
 
-### Question 5 
+#### Question 5 
 ```python
 myName = firstName + ' ' + prePosition + ' ' + lastName
+```
+
+## Exercise 4
+
+#### Question 1
+```python
+6.75 > a and 6.75 > b
+```
+
+#### Question 2
+```python
+(len(inventory) * 5) > len(myName)
+```
+
+#### Question 3
+```python
+len(inventory) is 0 or len(inventory) > 10
+```
+
+
+## Exercise 5
+
+#### Question 1
+```python
+favorites = ['Teddy Killerz']
+```
+
+#### Question 2
+```python
+favorites.append('Pendulum')
+```
+
+#### Question 3
+```python
+favorites[1] = 'Agnes Obel'
 ```
