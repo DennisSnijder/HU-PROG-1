@@ -20,7 +20,7 @@ class LockerSystem:
 
         self.show_menu()
 
-    # Shows the initial menu fopr the application.
+    # Shows the initial menu for the application.
     def show_menu(self):
         print('Welcome, please choose one of the following options')
         print('Option 1. Unlock a locker.')
