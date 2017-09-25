@@ -1,15 +1,12 @@
 from LockerAssignment.repository import locker_repository
 from LockerAssignment.controller import unlock_controller, request_controller, cancel_controller, quit_controller
-import logging
 
 
 class LockerSystem:
     optionControllers: dict
     locker_repository: locker_repository.LockerRepository
-    logger: logging
 
     def __init__(self):
-        self.logger = logging.getLogger('locker_log')
         self.locker_repository = locker_repository.LockerRepository()
         self.optionControllers = {
             1: unlock_controller.unlockController(self.locker_repository),
