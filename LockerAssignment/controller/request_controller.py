@@ -1,5 +1,6 @@
 from LockerAssignment.repository import locker_repository
 from LockerAssignment.controller import controller_interface
+import sqlite3
 
 
 class requestController(controller_interface.controllerInterface):
@@ -9,4 +10,15 @@ class requestController(controller_interface.controllerInterface):
         self.locker_repository = repository
 
     def handle_request(self):
-        print('oh shit, lemme request some shit')
+        requested_locker = int(input('Enter a number between 1 and 10: '))
+
+        if requested_locker < 1 or requested_locker > 10:
+            print('Invalid locker number')
+            exit(1)
+
+        pass_code = int(input('Please enter a pass code: '))
+
+        try:
+            self.locker_repository.add_locker(requested_locker, pass_code)
+        except sqlite3.IntegrityError:
+            print('This locker is already in use!')

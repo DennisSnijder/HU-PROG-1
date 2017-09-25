@@ -32,3 +32,8 @@ class LockerRepository:
         cursor = self.connection.cursor()
         cursor.execute('SELECT * FROM lockers WHERE locker_number = ' + str(number))
         return cursor.fetchone()
+
+    def cancel_locker(self, number: int):
+        cursor = self.connection.cursor()
+        cursor.execute('DELETE FROM lockers WHERE locker_number = ' + str(number))
+        cursor.close()
