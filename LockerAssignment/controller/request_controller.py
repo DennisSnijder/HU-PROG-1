@@ -14,7 +14,7 @@ class requestController(controller_interface.controllerInterface):
 
         if requested_locker < 1 or requested_locker > 10:
             print('Invalid locker number')
-            exit(1)
+            return
 
         pass_code = int(input('Please enter a pass code: '))
 

@@ -8,4 +8,4 @@ def table(celsius: list):
         print(outcome, i, sep='\t')
 
 
-print(table([10, 20, 30]))
+table([10, 20, 30])

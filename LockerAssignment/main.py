@@ -38,6 +38,9 @@ class LockerSystem:
     def handle_selected_option(self, selected_option):
         if selected_option in self.optionControllers:
             self.optionControllers[selected_option].handle_request()
+
+            print('=============================================')
+            self.show_menu()
         else:
             self.handle_invalid_menu_input()
 

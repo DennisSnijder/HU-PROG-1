@@ -14,9 +14,10 @@ class unlockController(controller_interface.controllerInterface):
 
         if locker is None:
             print('This locker does not exists')
-            exit(1)
 
         locker_code = input('Enter your locker code: ')
 
         if locker[1] == int(locker_code):
             print('Your locker is now open!')
+        else:
+            print('Invalid code')

@@ -9,7 +9,7 @@ def get_season_by_month_number(month: int) -> str:
         return "It's spring"
     elif month in summer:
         return "It's summer"
-    elif month in herfst:
+    elif month in autumn:
         return "It's autumn"
     elif month in winter:
         return "It's winter"
